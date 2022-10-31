@@ -1,0 +1,31 @@
+Syntax: 
+
+program = "{" compound_stm "}"
+
+compound_stm = stm[stm]
+
+declaration_stm = type IDENTIFIER ["=" expression]
+
+type = prim_type | arraydecl
+
+prim_type = "Integer" | "Boolean" | "Character" | "String" | "Float"
+
+arraydecl = "Array""<" type ">"
+
+assignment_stm = IDENTIFIER "=" expression
+
+read_stm = "read" IDENTIFIER ["," IDENTIFIER]
+
+print_stm = "print" expression ["," expression] 
+
+expression = CONSTANT | IDENTIFIER
+
+cond_stm = "if" condition "do" compound_stm "endif"
+
+condition = expression RELATION expression
+
+RELATION = "<" | "<=" | "=" | "!=" | ">=" | ">"
+
+for_stm = "for" [declaration_stm | assignment_stm] ";" [condition] ";" [assignment_stm] "do" compound_stm "endfor"
+
+stm = (for_stm | cond_stm | print_stm | read_stm | assignment_stm | declaration_stm) "\n"

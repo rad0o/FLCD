@@ -1,0 +1,49 @@
+Alphabet: 
+
+a. Uppercase (A-Z) and lowercase (a-z) of the Enlgish alphabet
+b. Underline characters
+c. Decimal digits (0-9)
+
+
+Lexic: 
+
+a. Special symbols, epresenting:
+
+1. Operators: + - / * % = < <= >= == 
+2. Separators: { } [ ] ( ) < > : ; , space newline
+3. Reserved words: Integer Character Boolean String Float Array TRUE FALSE read print for endfor if endif do break else 
+
+
+b. Identifiers:
+
+ - A sequence of letters and digits, such that the first character is a letter: 
+
+identifier = letter{letter|digit}
+letter = "A"|"B"|"C"|...|"Z"
+digit = "0"|"1"|"2"|...|"9"
+
+c. Constants
+
+1. Integer:
+
+noconst = ["+"|"-"]no
+no = digit[no]
+
+2. Character:
+
+character = 'letter'|'digit'
+
+3. String:
+
+constchar = "string"
+string = char[string]
+char = letter|digit
+
+4. Boolean:
+
+bool = "TRUE"|"FALSE"
+
+5. Float:
+
+float = ["+"|"-"]no"."no
+
